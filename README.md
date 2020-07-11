@@ -1,5 +1,14 @@
-### Hi there 👋
 
+<img src="" alt="banner that says about Savindi's basic information">
+I'm a Machine Learning engineer and a Data scientist who is passionate about creating something new to the world, to help people. If someone's face lit up with a smile because of a product I contributed to make, that will be my ultimate satisfaction.😄Apart from that, my unofficial occupation is teaching and sharing knowledge, which I enjoy alot⚡That sums up pretty much about me. Reach out if you want to create something cool together! 💌
+
+
+## Find me around the web 🌎:
+- Sharing knowledge on <a href="https://medium.com/@phantomgrin"> Medium</a> ✍🏾
+- Professional updates on <a href="https://www.linkedin.com/in/savindi/"> LinkedIn</a> 💼🎓
+- Find my fun projects on <a href="https://www.linkedin.com/in/monicampowell/"> Github</a> 💻😎
+- Personal updates on <a href="https://www.instagram.com/savva.narmu/"> Instagram </a> and <a href="https://www.linkedin.com/in/savindi/"> Facebook </a> 🎵🎨🎮🎻
+- Don't forget to checkout my <a href="https://phantomgrin.github.io/resume/"> resume </a> and <a href="https://phantomgrin.github.io/"> personal website </a> ✨
 <!--
 **PhantomGrin/PhantomGrin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

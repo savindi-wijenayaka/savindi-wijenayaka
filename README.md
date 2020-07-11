@@ -1,6 +1,6 @@
 
-<img src="" alt="banner that says about Savindi's basic information">
-I'm a Machine Learning engineer and a Data scientist who is passionate about creating something new to the world, to help people. If someone's face lit up with a smile because of a product I contributed to make, that will be my ultimate satisfaction.😄Apart from that, my unofficial occupation is teaching and sharing knowledge, which I enjoy alot⚡That sums up pretty much about me. Reach out if you want to create something cool together! 💌
+<img src="https://github.com/PhantomGrin/PhantomGrin/blob/master/savindi.gif" alt="banner that says about Savindi's basic information">
+I'm a Machine Learning engineer and a Data scientist who is passionate about creating something new to the world, to help people. If someone's face lit up with a smile because of a product I contributed to make, that will be my ultimate satisfaction.😄 Apart from that, my unofficial occupation is teaching and sharing knowledge, which I enjoy alot⚡ That sums up pretty much about me. Reach out if you want to create something cool together! 💌
 
 
 ## Find me around the web 🌎:

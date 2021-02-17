@@ -4,11 +4,11 @@ I'm a Machine Learning engineer and a Data scientist who is passionate about cre
 
 
 ## Find me around the web 🌎:
-- Sharing knowledge on <a href="https://medium.com/@phantomgrin"> Medium</a> ✍🏾
+- Sharing knowledge on <a href="https://medium.com/@savindi-wijenayaka"> Medium</a> ✍🏾
 - Professional updates on <a href="https://www.linkedin.com/in/savindi/"> LinkedIn</a> 💼🎓
-- Find my fun projects on <a href="https://www.linkedin.com/in/monicampowell/"> Github</a> 💻😎
-- Personal updates on <a href="https://www.instagram.com/savva.narmu/"> Instagram </a> and <a href="https://www.linkedin.com/in/savindi/"> Facebook </a> 🎵🎨🎮🎻
-- Don't forget to checkout my <a href="https://phantomgrin.github.io/resume/"> resume </a> and <a href="https://phantomgrin.github.io/"> personal website </a> ✨
+- Find my fun projects on <a href="https://github.com/savindi-wijenayaka/"> Github</a> 💻😎
+- Personal updates on <a href="https://www.instagram.com/savva.narmu/"> Instagram </a> and <a href="https://www.facebook.com/savindi.wijenayaka/"> Facebook </a> 🎵🎨🎮🎻
+- Don't forget to checkout my <a href="https://savindi-wijenayaka.github.io/resume/"> resume </a> and <a href="https://savindi-wijenayaka.github.io/"> personal website </a> ✨
 <!--
 **PhantomGrin/PhantomGrin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

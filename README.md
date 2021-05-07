@@ -11,7 +11,9 @@ I'm a Machine Learning engineer and a Data scientist who is passionate about cre
 - Don't forget to checkout my <a href="https://savindi-wijenayaka.github.io/resume/"> resume </a> and <a href="https://savindi-wijenayaka.github.io/"> personal website </a> ✨
 <br>
 
+<!--
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=savindi-wijenayaka&show_icons=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
+-->
 
 <!--
 **PhantomGrin/PhantomGrin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

@@ -8,7 +8,7 @@ I'm a Machine Learning engineer and a Data scientist who is passionate about cre
 - Professional updates on <a href="https://www.linkedin.com/in/savindi/"> LinkedIn</a> 💼🎓
 - Find my fun projects on <a href="https://github.com/savindi-wijenayaka/"> Github</a> 💻😎
 - Personal updates on <a href="https://www.instagram.com/vindy_stories/"> Instagram </a> and <a href="https://www.facebook.com/savindi.wijenayaka/"> Facebook </a> 🎵🎨🎮🎻
-- Don't forget to checkout my <a href="https://savindi-wijenayaka.github.io/resume/"> resume </a> and <a href="https://savindi-wijenayaka.github.io/"> personal website </a> ✨
+- Don't forget to checkout my <a href="https://docs.google.com/viewerng/viewer?url=https://github.com/savindi-wijenayaka/resume/raw/master/CV_SavindiWijenayaka.pdf/"> resume </a> and <a href="https://savindi.carrd.co/"> personal website </a> ✨
 <br>
 
 

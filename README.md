@@ -12,9 +12,9 @@ I'm a software engineer turned researcher fueled by the potential of machine lea
 - Don't forget to checkout my <a href="https://docs.google.com/viewerng/viewer?url=https://github.com/savindi-wijenayaka/resume/raw/master/CV_SavindiWijenayaka.pdf/"> resume </a> and <a href="https://savindi.carrd.co/"> personal website </a> ✨
 <br>
 
-<!--
+
 [![GitHub stats](https://github-readme-stats.vercel.app/api?username=savindi-wijenayaka&count_private=true&show_icons=true&include_all_commits=true&theme=tokyonight)](https://savindi-wijenayaka.github.io)
--->
+
 <!--
 **PhantomGrin/PhantomGrin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

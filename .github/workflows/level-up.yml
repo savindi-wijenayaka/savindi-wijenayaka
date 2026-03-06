@@ -1,0 +1,84 @@
+name: Level Up
+
+on:
+  schedule:
+    - cron: '0 12 7 3 *'    # TEST 1: today (Mar 7) at 12:00 UTC — approve this
+    - cron: '15 12 7 3 *'   # TEST 2: today (Mar 7) at 12:15 UTC — decline this, then re-run manually
+    # After testing, replace both lines above with:
+    # - cron: '0 0 1 9 *'
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'XP category to assign the year to'
+        required: true
+        default: 'industry'
+        type: choice
+        options:
+          - industry
+          - academia
+          - rest
+      mode:
+        description: "'new-year' adds level+1 | 'correction' swaps industry → category (no level change)"
+        required: true
+        default: 'correction'
+        type: choice
+        options:
+          - new-year
+          - correction
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      category: ${{ steps.vars.outputs.category }}
+      mode: ${{ steps.vars.outputs.mode }}
+    steps:
+      - name: Set parameters
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "category=industry" >> $GITHUB_OUTPUT
+            echo "mode=new-year"     >> $GITHUB_OUTPUT
+          else
+            echo "category=${{ inputs.category }}" >> $GITHUB_OUTPUT
+            echo "mode=${{ inputs.mode }}"         >> $GITHUB_OUTPUT
+          fi
+
+  approve:
+    needs: prepare
+    # Only scheduled runs pause for approval — manual dispatch skips this gate
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    environment: level-up-approval
+    steps:
+      - name: Pending approval
+        run: |
+          echo "Mode:     ${{ needs.prepare.outputs.mode }}"
+          echo "Category: ${{ needs.prepare.outputs.category }}"
+          echo "Approve this deployment to apply the change, or decline to abort."
+
+  apply:
+    needs: [prepare, approve]
+    # Run if prepare succeeded AND (approve succeeded OR approve was skipped for dispatch)
+    if: |
+      always() &&
+      needs.prepare.result == 'success' &&
+      (needs.approve.result == 'success' || needs.approve.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply level-up
+        run: |
+          python3 .github/scripts/level_up.py \
+            --category "${{ needs.prepare.outputs.category }}" \
+            --mode     "${{ needs.prepare.outputs.mode }}"
+
+      - name: Commit and push
+        run: |
+          git config --local user.name  "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/header.svg assets/header-dark.svg .github/career.json
+          LEVEL=$(python3 -c "import json; print(json.load(open('.github/career.json'))['total'])")
+          git diff --staged --quiet || git commit -m "chore: level up to ${LEVEL} [skip ci]"
+          git push

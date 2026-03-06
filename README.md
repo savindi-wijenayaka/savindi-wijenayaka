@@ -14,7 +14,7 @@
 <div align="center">
 
 [![Website](https://img.shields.io/badge/Home_Realm-savindi.com-8b6914?style=flat-square&labelColor=2d1b00&logo=homeassistant&logoColor=f5e6c8)](https://savindi.com)
-[![Resume](https://img.shields.io/badge/Quest_Log-Resume-c9a227?style=flat-square&labelColor=2d1b00&logo=readme&logoColor=f5e6c8)](https://savindi.com/CV_SavindiWijenayaka_ML.pdf)
+[![Resume](https://img.shields.io/badge/Quest_Log-Resume-8b6914?style=flat-square&labelColor=2d1b00&logo=readme&logoColor=f5e6c8)](https://savindi.com/CV_SavindiWijenayaka_ML.pdf)
 
 [![Medium](https://img.shields.io/badge/Chronicles-Medium-00ab6c?style=flat-square&labelColor=1a1a1a&logo=gitbook&logoColor=white)](https://savindi-wijenayaka.medium.com)
 [![LinkedIn](https://img.shields.io/badge/Guild_Hall-LinkedIn-0077b5?style=flat-square&labelColor=0d3050&logo=handshake&logoColor=white)](https://linkedin.com/in/savindi)

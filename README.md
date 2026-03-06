@@ -108,8 +108,11 @@
 
 > *The Chronicler records her findings across all realms of computation...*
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+- 📜 [KUBERNETES: Step-by-Step Guide with Spring Boot, Docker & GKE](https://medium.com/javarevisited/kubernetes-step-by-step-with-spring-boot-docker-gke-35e9481f6d5f)
+- 📜 [Production grade Azure Logic App deployment using ARM templates: A comprehensive guide](https://medium.com/@savindi-wijenayaka/production-grade-azure-logic-app-deployment-using-arm-templates-a-comprehensive-guide-76b2155fbaff)
+- 📜 [GitHub Actions: Pushing Artifacts to any Repository (add & commit)](https://medium.com/@savindi-wijenayaka/github-actions-pushing-artifacts-to-any-repository-44e302fa24ba)
+- 📜 [[Bitesize ML] Bilinear interpolation](https://medium.com/ai-in-plain-english/bitesize-ml-bilinear-interpolation-d732b799fc4e)
+- 📜 [All about Convolutional Neural Networks (CNNs)](https://medium.com/@savindi-wijenayaka/all-about-convolutional-neural-networks-cnns-172425c2cce4)
 
 <br>
 

@@ -6,8 +6,8 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
-            srcset="https://readme-typing-svg.demolab.com?font=VT323&size=28&duration=3000&pause=800&color=C9A227&center=true&vCenter=true&width=750&lines=%E2%9A%94%EF%B8%8F+Machine+Learning+Engineer+%C2%B7+Researcher%3B%F0%9F%A7%AC+PhD+%C2%B7+Deep+Learning+for+Medical+Imaging%3B%F0%9F%94%AE+Computer+Vision+%26+NLP+Sorceress%3B%E2%98%81%EF%B8%8F+Cloud-Native+Architect+on+Azure+%26+AWS%3B%E2%9C%8D%EF%B8%8F+Chronicler+%C2%B7+Technical+Scribe%3B%F0%9F%8F%86+NIH+Codeathon+Champion+(x2)%3B%F0%9F%93%B7+Landscape+Cartographer">
-    <img src="https://readme-typing-svg.demolab.com?font=VT323&size=28&duration=3000&pause=800&color=6B4C11&center=true&vCenter=true&width=750&lines=%E2%9A%94%EF%B8%8F+Machine+Learning+Engineer+%C2%B7+Researcher%3B%F0%9F%A7%AC+PhD+%C2%B7+Deep+Learning+for+Medical+Imaging%3B%F0%9F%94%AE+Computer+Vision+%26+NLP+Sorceress%3B%E2%98%81%EF%B8%8F+Cloud-Native+Architect+on+Azure+%26+AWS%3B%E2%9C%8D%EF%B8%8F+Chronicler+%C2%B7+Technical+Scribe%3B%F0%9F%8F%86+NIH+Codeathon+Champion+(x2)%3B%F0%9F%93%B7+Landscape+Cartographer" alt="Character class rotator">
+            srcset="https://readme-typing-svg.demolab.com?font=VT323&size=28&duration=3000&pause=800&color=C9A227&center=true&vCenter=true&width=750&lines=%E2%9A%94%EF%B8%8F+Machine+Learning+Engineer+%C2%B7+Researcher%3B%F0%9F%A7%AC+PhD+%C2%B7+Deep+Learning+for+Medical+Imaging%3B%F0%9F%94%AE+Computer+Vision+%26+NLP+Sorceress%3B%E2%98%81%EF%B8%8F+Cloud-Native+Architect%3B%E2%9C%8D%EF%B8%8F+Chronicler+%C2%B7+Technical+Scribe%3B%F0%9F%8F%86+NIH+Codeathon+Champion+(x2)%3B%F0%9F%93%B7+Landscape+Cartographer">
+    <img src="https://readme-typing-svg.demolab.com?font=VT323&size=28&duration=3000&pause=800&color=6B4C11&center=true&vCenter=true&width=750&lines=%E2%9A%94%EF%B8%8F+Machine+Learning+Engineer+%C2%B7+Researcher%3B%F0%9F%A7%AC+PhD+%C2%B7+Deep+Learning+for+Medical+Imaging%3B%F0%9F%94%AE+Computer+Vision+%26+NLP+Sorceress%3B%E2%98%81%EF%B8%8F+Cloud-Native+Architect%3B%E2%9C%8D%EF%B8%8F+Chronicler+%C2%B7+Technical+Scribe%3B%F0%9F%8F%86+NIH+Codeathon+Champion+(x2)%3B%F0%9F%93%B7+Landscape+Cartographer" alt="Character class rotator">
   </picture>
 </p>
 
@@ -67,18 +67,12 @@
 
 **⚔️ The Craft**
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,pytorch,opencv,fastapi,git&theme=dark">
-    <img src="https://skillicons.dev/icons?i=python,pytorch,opencv,fastapi,git&theme=light" alt="The craft">
-  </picture>
+  <img src="https://skillicons.dev/icons?i=python,pytorch,opencv,fastapi,git&theme=dark" alt="The craft">
 </div>
 
 **☁️ The Infrastructure**
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=azure,aws,docker,kubernetes,githubactions&theme=dark">
-    <img src="https://skillicons.dev/icons?i=azure,aws,docker,kubernetes,githubactions&theme=light" alt="The infrastructure">
-  </picture>
+  <img src="https://skillicons.dev/icons?i=azure,aws,docker,kubernetes,githubactions&theme=dark" alt="The infrastructure">
 </div>
 
 **🔬 Specialist Tools**
@@ -98,7 +92,7 @@
 | 🥇 1st Place — SPARC FAIR Codeathon | NIH · University of Auckland | 2022 |
 | 🥈 2nd Place — SPARC FAIR Codeathon | NIH · University of Auckland | 2024 |
 | 🎖️ 4th Place — DataStorm Datathon | Octave (JKH) · University of Moratuwa | 2020 |
-| 🥈 1st Runner-Up — National Youth Software Competition | UNDP Sri Lanka | 2017 |
+| 🥈 2nd Place — National Youth Software Competition | UNDP Sri Lanka | 2017 |
 | 🎓 First Class Honours · GPA 3.96 / 4.00 | University of Kelaniya | 2020 |
 | 📜 Dean's List Honouree | University of Kelaniya — all four years | 2016–2020 |
 
@@ -129,10 +123,11 @@
 <div align="center">
 
 [![Website](https://img.shields.io/badge/Home_Realm-savindi.com-8b6914?style=for-the-badge&labelColor=2d1b00&logo=firefox-browser&logoColor=f5e6c8)](https://savindi.com)
+[![Resume](https://img.shields.io/badge/Quest_Log-Resume-c9a227?style=for-the-badge&labelColor=2d1b00&logo=readme&logoColor=f5e6c8)](https://savindi.com/CV_SavindiWijenayaka_ML.pdf)
+
 [![Medium](https://img.shields.io/badge/Chronicles-Medium-00ab6c?style=for-the-badge&labelColor=1a1a1a&logo=medium&logoColor=white)](https://savindi-wijenayaka.medium.com)
 [![LinkedIn](https://img.shields.io/badge/Guild_Hall-LinkedIn-0077b5?style=for-the-badge&labelColor=0d3050&logo=linkedin&logoColor=white)](https://linkedin.com/in/savindi)
 [![Instagram](https://img.shields.io/badge/Gallery-Instagram-e1306c?style=for-the-badge&labelColor=2d0a1a&logo=instagram&logoColor=white)](https://instagram.com/vindy_stories)
-[![Resume](https://img.shields.io/badge/Quest_Log-Resume-c9a227?style=for-the-badge&labelColor=2d1b00&logo=readme&logoColor=f5e6c8)](https://savindi.com/CV_SavindiWijenayaka_ML.pdf)
 
 </div>
 

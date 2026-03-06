@@ -37,13 +37,13 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
-            srcset="https://github-readme-stats.vercel.app/api?username=savindi-wijenayaka&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0d1117&title_color=c9a227&icon_color=7c3aed&text_color=f0e6d3&ring_color=7c3aed">
-    <img src="https://github-readme-stats.vercel.app/api?username=savindi-wijenayaka&show_icons=true&count_private=true&include_all_commits=true&hide_border=false&bg_color=f5e6c8&title_color=6b4c11&icon_color=7c3aed&text_color=2d1b00&border_color=8b6914" height="170" alt="GitHub Stats">
+            srcset="https://github-readme-stats-nine-navy-58.vercel.app/api?username=savindi-wijenayaka&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0d1117&title_color=c9a227&icon_color=7c3aed&text_color=f0e6d3&ring_color=7c3aed">
+    <img src="https://github-readme-stats-nine-navy-58.vercel.app/api?username=savindi-wijenayaka&show_icons=true&count_private=true&include_all_commits=true&hide_border=false&bg_color=f5e6c8&title_color=6b4c11&icon_color=7c3aed&text_color=2d1b00&border_color=8b6914" height="170" alt="GitHub Stats">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)"
-            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=savindi-wijenayaka&layout=compact&langs_count=8&hide_border=true&bg_color=0d1117&title_color=c9a227&text_color=f0e6d3">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=savindi-wijenayaka&layout=compact&langs_count=8&hide_border=false&bg_color=f5e6c8&title_color=6b4c11&text_color=2d1b00&border_color=8b6914" height="170" alt="Top Languages">
+            srcset="https://github-readme-stats-nine-navy-58.vercel.app/api/top-langs/?username=savindi-wijenayaka&layout=compact&langs_count=8&hide_border=true&bg_color=0d1117&title_color=c9a227&text_color=f0e6d3">
+    <img src="https://github-readme-stats-nine-navy-58.vercel.app/api/top-langs/?username=savindi-wijenayaka&layout=compact&langs_count=8&hide_border=false&bg_color=f5e6c8&title_color=6b4c11&text_color=2d1b00&border_color=8b6914" height="170" alt="Top Languages">
   </picture>
 </div>
 

@@ -2,8 +2,8 @@ name: Level Up
 
 on:
   schedule:
-    - cron: '05 23 7 3 *'    # TEST 1: today (Mar 7) at 12:00 UTC — approve this
-    - cron: '15 23 7 3 *'   # TEST 2: today (Mar 7) at 12:15 UTC — decline this, then re-run manually
+    - cron: '10 23 6 3 *'    # TEST 1: today (Mar 7) at 12:00 UTC — approve this
+    - cron: '25 23 6 3 *'   # TEST 2: today (Mar 7) at 12:15 UTC — decline this, then re-run manually
     # After testing, replace both lines above with:
     # - cron: '0 0 1 9 *'
   workflow_dispatch:

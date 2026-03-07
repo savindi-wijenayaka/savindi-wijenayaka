@@ -2,10 +2,7 @@ name: Level Up
 
 on:
   schedule:
-    - cron: '10 23 6 3 *'    # TEST 1: today (Mar 7) at 12:00 UTC — approve this
-    - cron: '25 23 6 3 *'   # TEST 2: today (Mar 7) at 12:15 UTC — decline this, then re-run manually
-    # After testing, replace both lines above with:
-    # - cron: '0 0 1 9 *'
+    - cron: '0 0 1 9 *'
   workflow_dispatch:
     inputs:
       category:
@@ -18,13 +15,22 @@ on:
           - academia
           - rest
       mode:
-        description: "'new-year' adds level+1 | 'correction' swaps industry → category (no level change)"
+        description: "'new-year' adds level+1 | 'correction' moves 1 year from remove-from category to category (no level change)"
         required: true
         default: 'correction'
         type: choice
         options:
           - new-year
           - correction
+      remove_from:
+        description: "Category to remove 1 year from (used only when mode is 'correction')"
+        required: false
+        default: 'industry'
+        type: choice
+        options:
+          - industry
+          - academia
+          - rest
 
 jobs:
   prepare:
@@ -32,6 +38,7 @@ jobs:
     outputs:
       category: ${{ steps.vars.outputs.category }}
       mode: ${{ steps.vars.outputs.mode }}
+      remove_from: ${{ steps.vars.outputs.remove_from }}
     steps:
       - name: Set parameters
         id: vars
@@ -39,9 +46,11 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             echo "category=industry" >> $GITHUB_OUTPUT
             echo "mode=new-year"     >> $GITHUB_OUTPUT
+            echo "remove_from=industry" >> $GITHUB_OUTPUT
           else
             echo "category=${{ inputs.category }}" >> $GITHUB_OUTPUT
             echo "mode=${{ inputs.mode }}"         >> $GITHUB_OUTPUT
+            echo "remove_from=${{ inputs.remove_from }}" >> $GITHUB_OUTPUT
           fi
 
   approve:
@@ -53,8 +62,9 @@ jobs:
     steps:
       - name: Pending approval
         run: |
-          echo "Mode:     ${{ needs.prepare.outputs.mode }}"
-          echo "Category: ${{ needs.prepare.outputs.category }}"
+          echo "Mode:       ${{ needs.prepare.outputs.mode }}"
+          echo "Category:   ${{ needs.prepare.outputs.category }}"
+          echo "Remove from: ${{ needs.prepare.outputs.remove_from }}"
           echo "Approve this deployment to apply the change, or decline to abort."
 
   apply:
@@ -72,7 +82,8 @@ jobs:
         run: |
           python3 .github/scripts/level_up.py \
             --category "${{ needs.prepare.outputs.category }}" \
-            --mode     "${{ needs.prepare.outputs.mode }}"
+            --mode     "${{ needs.prepare.outputs.mode }}" \
+            --remove-from "${{ needs.prepare.outputs.remove_from }}"
 
       - name: Commit and push
         run: |

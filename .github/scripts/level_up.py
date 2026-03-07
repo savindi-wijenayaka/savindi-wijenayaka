@@ -4,7 +4,7 @@ Updates career.json and regenerates XP category bars in both header SVGs.
 
 Modes:
   new-year   — level+1, category+1 (default: industry)
-  correction — level unchanged, swap industry -> correct category
+  correction — level unchanged: remove 1 from --remove-from category, add 1 to --category
 
 Bar rendering logic:
   ALL three bars (academia, industry, rest) always render `total` squares —
@@ -167,6 +167,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--category', default='industry', choices=['industry', 'academia', 'rest'])
     parser.add_argument('--mode', default='new-year', choices=['new-year', 'correction'])
+    parser.add_argument('--remove-from', default='industry', choices=['industry', 'academia', 'rest'],
+                        help="Category to subtract 1 from (used only when mode is 'correction')")
     args = parser.parse_args()
 
     career = json.loads(CAREER_JSON.read_text())
@@ -175,10 +177,11 @@ def main():
         career['total'] += 1
         career[args.category] += 1
     elif args.mode == 'correction':
-        # Undo the auto-applied industry increment, apply correct category
-        if career['industry'] <= 0:
-            raise ValueError('industry count is already 0, cannot correct further')
-        career['industry'] -= 1
+        if args.category == args.remove_from:
+            raise ValueError('correction requires different category and remove-from (cannot move within same category)')
+        if career[args.remove_from] <= 0:
+            raise ValueError(f'{args.remove_from} count is already 0, cannot correct further')
+        career[args.remove_from] -= 1
         career[args.category] += 1
 
     CAREER_JSON.write_text(json.dumps(career, indent=2) + '\n')

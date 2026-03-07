@@ -130,7 +130,7 @@
   <text x="175" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#8b6914">ACADEMIA</text>
   <rect x="120" y="196" width="16" height="16" rx="1" fill="#8b6914" opacity=".85"/>
   <rect x="139" y="196" width="16" height="16" rx="1" fill="#8b6914" opacity=".85"/>
-  <rect x="158" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>
+  <rect x="158" y="196" width="16" height="16" rx="1" fill="#8b6914" opacity=".85"/>
   <rect x="177" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>
   <rect x="196" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>
   <rect x="215" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>
@@ -139,7 +139,7 @@
   <text x="450" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#065f46">INDUSTRY</text>
   <rect x="395" y="196" width="16" height="16" rx="1" fill="#065f46" opacity=".75"/>
   <rect x="414" y="196" width="16" height="16" rx="1" fill="#065f46" opacity=".75"/>
-  <rect x="433" y="196" width="16" height="16" rx="1" fill="#065f46" opacity=".75"/>
+  <rect x="433" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>
   <rect x="452" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>
   <rect x="471" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>
   <rect x="490" y="196" width="16" height="16" rx="1" fill="#2d1b00" opacity=".12"/>

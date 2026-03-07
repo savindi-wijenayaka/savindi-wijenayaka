@@ -123,32 +123,35 @@
         text-anchor="middle"
         font-family="'Courier New', Courier, monospace"
         font-size="15" letter-spacing="1"
-        fill="#1a0a2e">[ LVL 5  &#183;  CLASS: CREATOR ]</text>
+        fill="#1a0a2e">[ LVL 6  &#183;  CLASS: CREATOR ]</text>
 
   <!-- XP category bars -->
   <!-- ACADEMIA (left) -->
   <text x="175" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#c9a227">ACADEMIA</text>
-  <rect x="119" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".9"/>
-  <rect x="142" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".9"/>
-  <rect x="165" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".12"/>
-  <rect x="188" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".12"/>
-  <rect x="211" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="120" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".9"/>
+  <rect x="139" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".9"/>
+  <rect x="158" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="177" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="196" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="215" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
 
   <!-- INDUSTRY (middle — accent) -->
   <text x="450" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#a78bfa">INDUSTRY</text>
-  <rect x="394" y="196" width="20" height="20" rx="1" fill="#a78bfa" opacity=".85"/>
-  <rect x="417" y="196" width="20" height="20" rx="1" fill="#a78bfa" opacity=".85"/>
-  <rect x="440" y="196" width="20" height="20" rx="1" fill="#a78bfa" opacity=".12"/>
-  <rect x="463" y="196" width="20" height="20" rx="1" fill="#a78bfa" opacity=".12"/>
-  <rect x="486" y="196" width="20" height="20" rx="1" fill="#a78bfa" opacity=".12"/>
+  <rect x="395" y="196" width="16" height="16" rx="1" fill="#a78bfa" opacity=".85"/>
+  <rect x="414" y="196" width="16" height="16" rx="1" fill="#a78bfa" opacity=".85"/>
+  <rect x="433" y="196" width="16" height="16" rx="1" fill="#a78bfa" opacity=".85"/>
+  <rect x="452" y="196" width="16" height="16" rx="1" fill="#a78bfa" opacity=".12"/>
+  <rect x="471" y="196" width="16" height="16" rx="1" fill="#a78bfa" opacity=".12"/>
+  <rect x="490" y="196" width="16" height="16" rx="1" fill="#a78bfa" opacity=".12"/>
 
   <!-- REST (right) -->
   <text x="725" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#c9a227" opacity=".5">REST</text>
-  <rect x="669" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".3"/>
-  <rect x="692" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".12"/>
-  <rect x="715" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".12"/>
-  <rect x="738" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".12"/>
-  <rect x="761" y="196" width="20" height="20" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="670" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".3"/>
+  <rect x="689" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="708" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="727" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="746" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
+  <rect x="765" y="196" width="16" height="16" rx="1" fill="#c9a227" opacity=".12"/>
 
   <!-- XP bar -->
   <rect x="170" y="224" width="560" height="6" rx="3" fill="#c9a227" opacity=".15"/>

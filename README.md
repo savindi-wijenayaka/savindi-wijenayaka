@@ -109,7 +109,7 @@
 
 <br>
 
-## 📖 Chronicles — Latest Scrolls from the Archives
+## 📖 Latest Scrolls from the Archives
 
 > *The Chronicler records her findings across all realms of computation...*
 

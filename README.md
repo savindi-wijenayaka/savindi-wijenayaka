@@ -127,19 +127,6 @@
 - 🎙️ **Guest Speaker** — IEEE & DeepLearning.AI technical webinars · *Deep learning for broad audiences*
 - ✍️ **Technical Scribe** — [Medium](https://savindi-wijenayaka.medium.com) · *CNNs, Kubernetes, Docker, Azure, GitHub Actions*
 
-<br>
-
-<div align="center">
-
-### 🐍 The Snake That Ate My Commits
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/github-snake-dark.svg">
-  <img src="assets/github-snake.svg" alt="GitHub contribution snake animation" width="100%">
-</picture>
-
-</div>
-
 <picture>
   <source media="(prefers-color-scheme: dark)"
           srcset="https://capsule-render.vercel.app/api?type=waving&color=7c3aed&height=100&section=footer">

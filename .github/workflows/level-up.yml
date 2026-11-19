@@ -2,88 +2,52 @@ name: Level Up
 
 on:
   schedule:
-    - cron: '0 0 1 9 *'
+    # 1 Sept and 1 Mar (every 6 months)
+    - cron: '0 0 1 3,9 *'
   workflow_dispatch:
     inputs:
+      action:
+        description: 'Add or remove time'
+        required: true
+        default: 'add'
+        type: choice
+        options:
+          - add
+          - remove
+      amount:
+        description: 'Years to add/remove'
+        required: true
+        default: '0.5'
+        type: choice
+        options:
+          - '0.5'
+          - '1'
       category:
-        description: 'XP category to assign the year to'
+        description: 'XP category'
         required: true
         default: 'industry'
         type: choice
         options:
           - industry
           - academia
-          - rest
-      mode:
-        description: "'new-year' adds level+1 | 'correction' moves 1 year from remove-from category to category (no level change)"
-        required: true
-        default: 'correction'
-        type: choice
-        options:
-          - new-year
-          - correction
-      remove_from:
-        description: "Category to remove 1 year from (used only when mode is 'correction')"
-        required: false
-        default: 'industry'
-        type: choice
-        options:
-          - industry
-          - academia
-          - rest
+
+permissions:
+  contents: write
 
 jobs:
-  prepare:
-    runs-on: ubuntu-latest
-    outputs:
-      category: ${{ steps.vars.outputs.category }}
-      mode: ${{ steps.vars.outputs.mode }}
-      remove_from: ${{ steps.vars.outputs.remove_from }}
-    steps:
-      - name: Set parameters
-        id: vars
-        run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "category=industry" >> $GITHUB_OUTPUT
-            echo "mode=new-year"     >> $GITHUB_OUTPUT
-            echo "remove_from=industry" >> $GITHUB_OUTPUT
-          else
-            echo "category=${{ inputs.category }}" >> $GITHUB_OUTPUT
-            echo "mode=${{ inputs.mode }}"         >> $GITHUB_OUTPUT
-            echo "remove_from=${{ inputs.remove_from }}" >> $GITHUB_OUTPUT
-          fi
-
-  approve:
-    needs: prepare
-    # Only scheduled runs pause for approval — manual dispatch skips this gate
-    if: github.event_name == 'schedule'
-    runs-on: ubuntu-latest
-    environment: level-up-approval
-    steps:
-      - name: Pending approval
-        run: |
-          echo "Mode:       ${{ needs.prepare.outputs.mode }}"
-          echo "Category:   ${{ needs.prepare.outputs.category }}"
-          echo "Remove from: ${{ needs.prepare.outputs.remove_from }}"
-          echo "Approve this deployment to apply the change, or decline to abort."
-
   apply:
-    needs: [prepare, approve]
-    # Run if prepare succeeded AND (approve succeeded OR approve was skipped for dispatch)
-    if: |
-      always() &&
-      needs.prepare.result == 'success' &&
-      (needs.approve.result == 'success' || needs.approve.result == 'skipped')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Apply level-up
+      - name: Apply change
+        env:
+          ACTION: ${{ github.event_name == 'schedule' && 'add' || inputs.action }}
+          AMOUNT: ${{ github.event_name == 'schedule' && '0.5' || inputs.amount }}
+          CATEGORY: ${{ github.event_name == 'schedule' && 'industry' || inputs.category }}
         run: |
           python3 .github/scripts/level_up.py \
-            --category "${{ needs.prepare.outputs.category }}" \
-            --mode     "${{ needs.prepare.outputs.mode }}" \
-            --remove-from "${{ needs.prepare.outputs.remove_from }}"
+            --action "$ACTION" --amount "$AMOUNT" --category "$CATEGORY"
 
       - name: Commit and push
         run: |
@@ -91,5 +55,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/header.svg assets/header-dark.svg .github/career.json
           LEVEL=$(python3 -c "import json; print(json.load(open('.github/career.json'))['total'])")
-          git diff --staged --quiet || git commit -m "chore: level up to ${LEVEL} [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: career update, total ${LEVEL}y [skip ci]"
           git push

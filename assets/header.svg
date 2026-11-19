@@ -123,41 +123,30 @@
         text-anchor="middle"
         font-family="'Courier New', Courier, monospace"
         font-size="15" letter-spacing="1"
-        fill="#f5e6c8">[ LVL 8  &#183;  CLASS: CREATOR ]</text>
+        fill="#f5e6c8">[ LVL 7  &#183;  CLASS: CREATOR ]</text>
 
   <!-- XP category bars -->
   <!-- ACADEMIA (left) -->
-  <text x="175" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#8b6914">ACADEMIA</text>
-  <rect x="121" y="196" width="11" height="11" rx="1" fill="#8b6914" opacity=".85"/>
-  <rect x="135" y="196" width="11" height="11" rx="1" fill="#8b6914" opacity=".85"/>
-  <rect x="149" y="196" width="11" height="11" rx="1" fill="#8b6914" opacity=".85"/>
-  <rect x="163" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="177" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="191" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="205" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="219" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
+  <text x="290" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#8b6914">ACADEMIA</text>
+  <rect x="232" y="196" width="14" height="14" rx="1" fill="#8b6914" opacity=".85"/>
+  <rect x="249" y="196" width="14" height="14" rx="1" fill="#8b6914" opacity=".85"/>
+  <rect x="266" y="196" width="14" height="14" rx="1" fill="#8b6914" opacity=".85"/>
+  <rect x="283" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
+  <rect x="283" y="196" width="7" height="14" rx="1" fill="#8b6914" opacity=".85"/>
+  <rect x="300" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
+  <rect x="317" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
+  <rect x="334" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
 
-  <!-- INDUSTRY (middle — accent) -->
-  <text x="450" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#065f46">INDUSTRY</text>
-  <rect x="396" y="196" width="11" height="11" rx="1" fill="#065f46" opacity=".75"/>
-  <rect x="410" y="196" width="11" height="11" rx="1" fill="#065f46" opacity=".75"/>
-  <rect x="424" y="196" width="11" height="11" rx="1" fill="#065f46" opacity=".75"/>
-  <rect x="438" y="196" width="11" height="11" rx="1" fill="#065f46" opacity=".75"/>
-  <rect x="452" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="466" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="480" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="494" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-
-  <!-- REST (right) -->
-  <text x="725" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#8b6914" opacity=".5">REST</text>
-  <rect x="671" y="196" width="11" height="11" rx="1" fill="#8b6914" opacity=".35"/>
-  <rect x="685" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="699" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="713" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="727" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="741" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="755" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
-  <rect x="769" y="196" width="11" height="11" rx="1" fill="#2d1b00" opacity=".12"/>
+  <!-- INDUSTRY (right — accent) -->
+  <text x="610" y="188" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" letter-spacing="1" fill="#065f46">INDUSTRY</text>
+  <rect x="552" y="196" width="14" height="14" rx="1" fill="#065f46" opacity=".75"/>
+  <rect x="569" y="196" width="14" height="14" rx="1" fill="#065f46" opacity=".75"/>
+  <rect x="586" y="196" width="14" height="14" rx="1" fill="#065f46" opacity=".75"/>
+  <rect x="603" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
+  <rect x="603" y="196" width="7" height="14" rx="1" fill="#065f46" opacity=".75"/>
+  <rect x="620" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
+  <rect x="637" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
+  <rect x="654" y="196" width="14" height="14" rx="1" fill="#2d1b00" opacity=".12"/>
 
   <!-- XP bar -->
   <rect x="170" y="224" width="560" height="6" rx="3" fill="#2d1b00" opacity=".18"/>

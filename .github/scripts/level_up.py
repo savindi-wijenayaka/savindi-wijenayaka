@@ -4,14 +4,15 @@ Updates career.json and regenerates XP category bars in both header SVGs.
 
 Modes:
   new-year   — level+1, category+1 (default: industry)
+  refresh    — re-render SVGs from career.json (values may be x.5 for half years)
   correction — level unchanged: remove 1 from --remove-from category, add 1 to --category
 
 Bar rendering logic:
-  ALL three bars (academia, industry, rest) always render `total` squares —
+  BOTH bars (academia, industry) always render `total` squares —
   one per level year. When total increases, every bar gains an extra empty
   square and the square size shrinks proportionally to stay within the fixed
   bar width. Only the filled count differs per category (how many years were
-  spent there). This means a level-up visually extends all three bars equally,
+  spent there). This means a level-up visually extends both bars equally,
   while only the relevant category gets one more filled square.
 
 Overflow handling:
@@ -35,7 +36,7 @@ HEADER_LIGHT = REPO_ROOT / 'assets' / 'header.svg'
 HEADER_DARK  = REPO_ROOT / 'assets' / 'header-dark.svg'
 
 # Fixed bar geometry
-BAR_CENTERS  = {'academia': 175, 'industry': 450, 'rest': 725}
+BAR_CENTERS  = {'academia': 290, 'industry': 610}
 BAR_WIDTH    = 116   # px — width each bar occupies
 LABEL_Y      = 188
 SQUARES_Y    = 196
@@ -46,24 +47,21 @@ COLORS = {
     'light': {
         'academia': ('#8b6914', '.85', '#2d1b00', '.12'),
         'industry': ('#065f46', '.75', '#2d1b00', '.12'),
-        'rest':     ('#8b6914', '.35', '#2d1b00', '.12'),
     },
     'dark': {
         'academia': ('#c9a227', '.9',  '#c9a227', '.12'),
         'industry': ('#a78bfa', '.85', '#a78bfa', '.12'),
-        'rest':     ('#c9a227', '.3',  '#c9a227', '.12'),
     },
 }
 
 LABEL_COLORS = {
-    'light': {'academia': '#8b6914', 'industry': '#065f46', 'rest': ('#8b6914', ' opacity=".5"')},
-    'dark':  {'academia': '#c9a227', 'industry': '#a78bfa', 'rest': ('#c9a227', ' opacity=".5"')},
+    'light': {'academia': '#8b6914', 'industry': '#065f46'},
+    'dark':  {'academia': '#c9a227', 'industry': '#a78bfa'},
 }
 
 CATEGORY_LABELS = {
     'academia': '(left)',
-    'industry': '(middle \u2014 accent)',
-    'rest':     '(right)',
+    'industry': '(right \u2014 accent)',
 }
 
 
@@ -94,14 +92,21 @@ def render_square_bar(category, filled, total, size, gap, theme):
     lines = []
     for i in range(total):
         x = start_x + i * (size + gap)
-        if i < filled:
-            lines.append(
-                f'  <rect x="{x}" y="{SQUARES_Y}" width="{size}" height="{size}" rx="1" fill="{fill_col}" opacity="{fill_op}"/>'
-            )
-        else:
+        # empty base drawn unless square is fully filled; half year overlays half width
+        if filled < i + 1:
             lines.append(
                 f'  <rect x="{x}" y="{SQUARES_Y}" width="{size}" height="{size}" rx="1" fill="{empty_col}" opacity="{empty_op}"/>'
             )
+        if filled >= i + 1:
+            fill_w = size
+        elif filled > i:  # half year
+            fill_w = size / 2
+            fill_w = int(fill_w) if fill_w == int(fill_w) else fill_w
+        else:
+            continue
+        lines.append(
+            f'  <rect x="{x}" y="{SQUARES_Y}" width="{fill_w}" height="{size}" rx="1" fill="{fill_col}" opacity="{fill_op}"/>'
+        )
     return '\n'.join(lines)
 
 
@@ -120,12 +125,12 @@ def render_thin_bar(category, filled, total, theme):
 
 
 def generate_bars_section(career, theme):
-    total = career['total']
+    total = math.ceil(career['total'])
     size, gap = calc_square_params(total)
     use_thin = size is None
 
     lines = ['  <!-- XP category bars -->']
-    for cat in ['academia', 'industry', 'rest']:
+    for cat in ['academia', 'industry']:
         label = CATEGORY_LABELS[cat]
         color, opacity_attr = label_attrs(cat, theme)
         cx = BAR_CENTERS[cat]
@@ -148,7 +153,7 @@ def update_svg(path, career, theme):
     content = path.read_text()
 
     # Update LVL number in badge
-    content = re.sub(r'LVL \d+', f'LVL {career["total"]}', content)
+    content = re.sub(r'LVL \d+', f'LVL {math.floor(career["total"])}', content)
 
     # Replace category bars section (between markers)
     new_bars = generate_bars_section(career, theme)
@@ -163,29 +168,32 @@ def update_svg(path, career, theme):
     print(f'Updated {path.name}')
 
 
+def fmt(n):
+    return int(n) if n == int(n) else n
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--category', default='industry', choices=['industry', 'academia', 'rest'])
-    parser.add_argument('--mode', default='new-year', choices=['new-year', 'correction'])
-    parser.add_argument('--remove-from', default='industry', choices=['industry', 'academia', 'rest'],
-                        help="Category to subtract 1 from (used only when mode is 'correction')")
+    parser.add_argument('--category', default='industry', choices=['industry', 'academia'])
+    parser.add_argument('--action', default='add', choices=['add', 'remove', 'refresh'])
+    parser.add_argument('--amount', type=float, default=0.5, choices=[0.5, 1.0])
     args = parser.parse_args()
 
     career = json.loads(CAREER_JSON.read_text())
 
-    if args.mode == 'new-year':
-        career['total'] += 1
-        career[args.category] += 1
-    elif args.mode == 'correction':
-        if args.category == args.remove_from:
-            raise ValueError('correction requires different category and remove-from (cannot move within same category)')
-        if career[args.remove_from] <= 0:
-            raise ValueError(f'{args.remove_from} count is already 0, cannot correct further')
-        career[args.remove_from] -= 1
-        career[args.category] += 1
+    if args.action == 'add':
+        career[args.category] += args.amount
+    elif args.action == 'remove':
+        if career[args.category] < args.amount:
+            raise ValueError(f'{args.category} has {career[args.category]}y, cannot remove {args.amount}y')
+        career[args.category] -= args.amount
+
+    career['industry'] = fmt(career['industry'])
+    career['academia'] = fmt(career['academia'])
+    career['total'] = fmt(career['industry'] + career['academia'])
 
     CAREER_JSON.write_text(json.dumps(career, indent=2) + '\n')
-    print(f"career.json → total={career['total']} industry={career['industry']} academia={career['academia']} rest={career['rest']}")
+    print(f"career.json -> total={career['total']} industry={career['industry']} academia={career['academia']}")
 
     update_svg(HEADER_LIGHT, career, 'light')
     update_svg(HEADER_DARK,  career, 'dark')
